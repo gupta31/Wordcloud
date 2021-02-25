@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:white;
+        }
+        div#tag{
+            left:25%;
+            top:15%;
+            position: absolute;
+        }
+    </style>
+    <!--https://www.jqueryscript.net/text/3D-Interactive-SVG-Tag-Cloud-Plugin-With-jQuery-SVG-3D-Tag-Cloud/jquery.svg3dtagcloud.min.js-->
+    
+</head>
+<body>
+    <div id="tag"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="jquery.svg3dtagcloud.js"></script>
+    <script src="jquery.svg3dtagcloud.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var skills=[
+                { label :'HTML'},
+                { label :'CSS'},
+                { label :'JavaScript'},
+                { label :'C++'},
+                { label :'C'},
+                { label :'NodeJS'},
+                { label :'Anglar'},
+                { label :'Python'},
+                { label :'Java'},
+                { label :'Linux'},
+                { label :'Unix'},
+                { label :'SQL Server'},
+                { label :'Azure'},
+                { label :'Sass'},
+                { label :'Figma'},
+                { label :'Typescript'},
+                { label :'Springboot'},
+                { label :'Firebase'},
+                { label :'Arduino'},
+                { label :'AWS'},
+                { label :'GoogleCloud'},
+                { label :'Bootstrap'},
+                { label :'Dojo'},
+                { label :'Kubernetes'},
+                { label :'FlutterL'},
+                { label :'React'},
+                { label :'Git'},
+                { label :'Embedded Linux'},
+                { label :'Jquery'},
+                { label :'JSON'},
+                { label :'Bash'},
+                { label :'Perl'},
+                { label :'Kotlin'},
+                { label :'Django'},
+                { label :'XML'},
+                { label :'C#'}
+            ];
+            var settings={
+                entries:skills,
+                width:640,
+                height:480,
+                radius:'65%',
+                radiusMin:75,
+                bgDraw:true,
+                bgcolor:'#ffffff',
+                opacityOver:1.00,
+                opacityOut:0.05,
+                opacitySpeed:6,
+                fov:800,
+                speed:1.5,
+                fontFamily:'poppins',
+                fontSize:'30',
+                fontColor:'purple',
+                fontWeight:'bold',
+                fontStyle:'normal',
+                fontSretch:'normal',
+                fontToUpperCase:false
+            };
+            $('#tag').svg3DTagCloud(settings);
+        });
+    </script>  
+</body>
+</html>
